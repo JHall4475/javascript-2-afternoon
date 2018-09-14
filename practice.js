@@ -13,7 +13,12 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age. 
   Then alert your name using dot notation.
 */
+const me = {
+name: "Jared",
+age: 28
+}
 
+me.name
 //Code here
 
 
@@ -25,7 +30,14 @@
   Have the values to those keys be your favorite thing in that category.
 */
 
-//Code here
+const favoriteThings = {
+  band: "Journey",
+  food: "Chinese",
+  person: "Megan",
+  book: "Book of Mormon",
+  movie:"Lord of the Rings",
+  holiday:"Halloween"
+}//Code here
 
 
 
@@ -33,7 +45,8 @@
   After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 */
 
-//Code here
+favoriteThings.car = "Mustang"
+favoriteThings.brand = "Browning"//Code here
 
 
 
@@ -42,7 +55,8 @@
 */
 
 //Code here
-
+favoriteThings.food = "Chicken Nuggets"
+favoriteThings.book = "Harry Potter"
 
 
 ////////// PROBLEM 3 //////////
@@ -56,13 +70,17 @@
 */
 
 //Code here
-
+const backPack = {};
+const item = 'firstPocket';
+backPack[item] = 'chapstick';
+backPack.color = 'Grey'
 
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
+// alert(backPack)
 //Code here
 
 
@@ -72,6 +90,8 @@ You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. 
 */
+
+console.log(backPack)
 
 //Code here
 
@@ -95,6 +115,10 @@ var user2 = {
   name -> 'Tyler S. McGinnis' and email -> 'tyler.mcginnis@devmounta.in'. 
   Make that change without modifying the original object code above.
 */
+
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
+console.log(user2)
 
 //Code Here
 
@@ -120,7 +144,7 @@ var user2 = {
 */
 
 //Code Here
-
+methodCollection = {};
 
 
 /*
@@ -129,6 +153,10 @@ var user2 = {
 */
 
 //Code Here
+methodCollection.alertHello = function () {
+  return alert('hello')};
+methodCollection.logHello = function () {
+  console.log('hello')};
 
 
 
@@ -137,7 +165,8 @@ var user2 = {
 */
 
 //Code Here
-
+//methodCollection.alertHello();
+methodCollection.logHello();
 
 
 ////////// PROBLEM 6 //////////
@@ -148,8 +177,10 @@ var user2 = {
 */
 
 //Code Here
-
-
+function makePerson(name, birthday, ssn){
+  return newObject = {name: name, birthday: birthday, ssn: ssn}
+}
+console.log(makePerson('Jared', '9/12/18', 33445))
 
 ////////// PROBLEM 7 //////////
 
@@ -159,5 +190,9 @@ var user2 = {
 */
 
 //Code Here
+
+function makeCard(cardNumber, expirationDate, securityCode){
+  return newCard = {cardNumber: cardNumber, expirationDate: expirationDate, securityCode: securityCode}
+};
 
 
